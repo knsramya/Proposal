@@ -20,6 +20,14 @@ body {
   width: 100%;
 }
 
+.gif-container img {
+  max-width: 100%;
+  width: 100%;
+  height: auto;
+  border-radius: 12px; /* optional rounded corners */
+}
+
+
 /* Each screen */
 .screen {
   display: none; /* hidden by default */
