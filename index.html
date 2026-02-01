@@ -3,13 +3,82 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bambii</title>
+  <title>Bubulu </title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="container" id="app">
 
-    <!-- Screen 1 -->
+    <!-- NEW Screen -3 (Q1) -->
+    <div class="screen" data-screen="-3">
+      <div class="gif-container">
+        <img src="gifs/manja.gif" alt="Manja Sticker" />
+      </div>
+
+      <h1>Question 1: What color saree was I wearing when we first met? 💛</h1>
+      <p>Be honest 😌</p>
+      <div class="btn">
+        <a href="#" class="next" data-next="-2">A. Gold ✨</a>
+        <a href="#" class="next" data-next="-2">B. Yellow 💛</a>
+      </div>
+    </div>
+
+    <!-- NEW Screen -2 (Q2) -->
+    <div class="screen" data-screen="-2">
+      <div class="gif-container">
+        <img src="gifs/mochi.gif" alt="Mochi Sticker" />
+      </div>
+
+      <h1>Question 2: What were we doing on Feb 10th, 2022? 😳</h1>
+      <p>You better remember this one 😌</p>
+      <div class="btn">
+        <a href="#" class="next" data-next="-1">A. Giggling 😄</a>
+        <a href="#" class="next" data-next="-1">B. Swooning 😳</a>
+      </div>
+    </div>
+
+    <!-- NEW Screen -1 (Q3) -->
+    <div class="screen" data-screen="-1">
+      <div class="gif-container">
+        <!-- You said "gif indicating something else" — using an existing gif.
+             If you want a different one, replace the file here. -->
+        <img src="gifs/couple-forgive-me.gif" alt="Couple Sticker" />
+      </div>
+
+      <h1>Question 3: Why did you marry me? 😏</h1>
+      <p>Choose wisely 😌</p>
+      <div class="btn">
+        <a href="#" class="next" data-next="0">A. Because I love you ❤️</a>
+        <a href="#" class="next" data-next="0">B. Because of you know… 😏</a>
+      </div>
+    </div>
+
+    <!-- NEW Screen 0 (Q4 - photos) -->
+    <div class="screen" data-screen="0">
+      <div class="gif-container">
+        <img src="gifs/mochi-cat.gif" alt="Mochi Cat Sticker" />
+      </div>
+
+      <h1>Question 4: Which picture of us do you like more? 🥺</h1>
+      <p>Pick one 😤</p>
+
+      <!-- Replace these two image files with YOUR photos.
+           Put your photos in /gifs and rename them exactly like below,
+           OR change the src paths to your filenames. -->
+      <div style="display:flex; gap:14px; justify-content:center; flex-wrap:wrap; margin: 14px 0;">
+        <a href="#" class="next" data-next="1" style="text-decoration:none;">
+          <img src="gifs/us1.jpg" alt="Us photo 1" style="width:160px; height:160px; object-fit:cover; border-radius:16px;" />
+          <div style="margin-top:8px; text-align:center;">A. This one 💖</div>
+        </a>
+
+        <a href="#" class="next" data-next="1" style="text-decoration:none;">
+          <img src="gifs/us2.jpg" alt="Us photo 2" style="width:160px; height:160px; object-fit:cover; border-radius:16px;" />
+          <div style="margin-top:8px; text-align:center;">B. This one 😘</div>
+        </a>
+      </div>
+    </div>
+
+    <!-- Screen 1 (EXISTING) -->
     <div class="screen" data-screen="1">
       <div class="gif-container">
         <img src="gifs/manja.gif" alt="Manja Sticker" />
@@ -23,7 +92,7 @@
       </div>
     </div>
 
-    <!-- Screen 2 -->
+    <!-- Screen 2 (EXISTING) -->
     <div class="screen" data-screen="2">
       <div class="gif-container">
         <img src="gifs/mochi.gif" alt="Mochi Sticker" />
@@ -37,7 +106,7 @@
       </div>
     </div>
 
-    <!-- Screen 3 -->
+    <!-- Screen 3 (EXISTING) -->
     <div class="screen" data-screen="3">
       <div class="gif-container">
         <img src="gifs/couple-forgive-me.gif" alt="couple-forgive-me Sticker" />
@@ -51,7 +120,7 @@
       </div>
     </div>
 
-    <!-- Final Screen -->
+    <!-- Final Screen (EXISTING) -->
     <div class="screen" data-screen="yes">
       <div class="gif-container">
         <img src="gifs/mochi-cat.gif" alt="Mochi Cat Sticker" />
