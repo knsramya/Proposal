@@ -1,21 +1,37 @@
-const screens = document.querySelectorAll('.screen');
-const nextBtns = document.querySelectorAll('.next');
+const screens = document.querySelectorAll(".screen");
 
-// Show first screen on load
-screens.forEach(screen => screen.style.display = 'none');
-document.querySelector('.screen[data-screen="-3"]').style.display = 'flex';
+// Hide all screens
+function hideAll() {
+  screens.forEach((screen) => (screen.style.display = "none"));
+}
 
-nextBtns.forEach(btn => {
-  btn.addEventListener('click', e => {
+// Show one screen safely
+function showScreen(id) {
+  hideAll();
+  const target = document.querySelector(`.screen[data-screen="${id}"]`);
+  if (!target) {
+    console.error(`Screen not found: ${id}`);
+    return;
+  }
+  target.style.display = "flex";
+}
+
+// Start at your first question
+document.addEventListener("DOMContentLoaded", () => {
+  showScreen("-3");
+
+  // Event delegation: works even when clicking on images/text inside the <a>
+  document.getElementById("app").addEventListener("click", (e) => {
+    const btn = e.target.closest("a.next");
+    if (!btn) return;
+
     e.preventDefault();
-    const nextScreen = btn.dataset.next;
 
-    // If a button/link has no data-next (like the moving No button), do nothing
-    if (!nextScreen) return;
+    const nextId = btn.dataset.next;
 
-    screens.forEach(screen => screen.style.display = 'none');
+    // If there is no data-next (like the moving No button), ignore it
+    if (!nextId) return;
 
-    const target = document.querySelector(`.screen[data-screen="${nextScreen}"]`);
-    if (target) target.style.display = 'flex';
+    showScreen(nextId);
   });
 });
